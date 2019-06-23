@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <v-card>
     <v-card-title>
       <h3>{{ this.id }}. {{ this.title }}</h3>
@@ -46,3 +47,19 @@ export default {
 </script>
 
 <style></style>
+=======
+    
+</template>
+
+<script>
+export default {
+    name: 'Debt'
+}
+</script>
+
+<style>
+
+</style>
+
+
+>>>>>>> 69def7d2317b048209635cb5d3f1ad9b15ec9605
