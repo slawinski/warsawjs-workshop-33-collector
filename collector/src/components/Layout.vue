@@ -1,12 +1,15 @@
 <template>
   <v-app id="inspire">
     <v-toolbar color="indigo" dark fixed app>
-      <v-toolbar-title>Collector : your debt listing</v-toolbar-title>
+      <v-toolbar-title>Collector: Get your debt!</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
         <v-layout justify-center align-center>
-          <v-flex text-xs-center> </v-flex>
+          <v-flex text-xs-center>
+            <debt-list />
+            <add-debt-form />
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
@@ -17,7 +20,15 @@
 </template>
 
 <script>
+import DebtList from "./DebtList";
+import AddDebtForm from "./AddDebtForm";
+
 export default {
+  name: "Layout",
+  components: {
+    AddDebtForm,
+    DebtList
+  },
   data: () => ({
     drawer: null
   }),
