@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { removeDebt } from "../service/api.service.js";
+import DebtService from "../service/debts.service.js";
 export default {
   name: "Debt",
   filters: {
@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     async remove() {
-      await removeDebt(this.id);
+      await DebtService.removeDebt(this.id);
     }
   },
   props: {

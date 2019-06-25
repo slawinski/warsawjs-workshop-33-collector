@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { getDebts } from "../service/api.service.js";
+import DebtService from "../service/debts.service.js";
 import Debt from "./Debt";
 
 export default {
@@ -27,7 +27,7 @@ export default {
     };
   },
   async created() {
-    this.debts = await getDebts();
+    this.debts = await DebtService.getDebts();
   }
 };
 </script>

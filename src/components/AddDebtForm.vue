@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { postDebt } from "../service/api.service.js";
+import DebtService from "../service/debts.service.js";
 
 export default {
   name: "AppDebtForm",
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     async post() {
-      await postDebt(this.debt);
+      await DebtService.postDebt(this.debt);
       await this.reset();
     },
     reset() {
